@@ -100,5 +100,134 @@
     <p>Loop for looping.</p>
     <p>alt for alterative text</p>
     <p>handling the issues with audio for older browsers.</p>
+  </section>
+  <section>...<i>miss</i>....</section>
+  <section>
+    <h4>9. HTML Form</h4>
+    <p>Action - URL of server script</p>
+    <p>Method - get or post</p>
+    <p>get - default method</p>
+    <p>get - you can see what is happened ()/search.php&q=smth)</p>
+    <p>get - small transaction</p>
+    <p>post - big data, secret</p>
+
+    <h5>Form 1:</h5>
+    <form action="program.php" method="get">
+      <p>Form:</p>
+      <textarea raws="3" cols="60" name="feedback">
+        Inpit text here...
+      </textarea>
+    </br>
+    <input type="submit" value="Send">
+    </form>
+    <h5>Form 2:</h5>
+    <form>
+      Enter name:</br>
+      <input type="text" name="feedback"> <br> <br>
+
+      <p>Password:</p>
+      <input type="password" name="underpassword">
+      <p><i>Don't use GET method for password sending!</i></p>
+
+      Select each:</br>
+      <input type="checkbox" name="items" value="car">Car <br> <br>
+      <input type="checkbox" name="items" value="teddy bear">Teddy bear <br> <br>
+      <input type="checkbox" name="items" value="toothbrush">Toothbrush <br> <br>
+
+      Select one:</br>
+      <input type="radio" name="items" value="High">High <br> <br>
+      <input type="radio" name="items" value="Medium">Medium <br> <br>
+      <input type="radio" name="items" value="Low">Low <br> <br>
+
+      Select from a list</br>
+      <select name="cities">
+        <option value="hk">Hong Kong</option>
+        <option value="vc">Vencouver</option>
+        <option value="sf">San Francisco</option>
+      </select>
+
+<br> <br>Value="something" - for default text</br>
+      <label for="text3">text1</label>
+      <input type="text" name="text1" value="default text">
+
+<br> <br>placeholder="something" - for placeholder text</br>
+      <label for="text3">text2</label>
+      <input type="text" name="text2" placeholder="placeholder text">
+
+<br> <br>required and autofocus</br>
+
+      <label for="text3">text3</label>
+      <input type="text" name="text3" autofocus required>
+      <br> <br><input type="submit" value="Send">
+    </form>
+
+<h5>Handling File upload</h5>
+    <p>Enctype</p>
+    <p>POST method</p>
+    <form action="destination" method="post" enctype="multipart/form-data">
+      <input type="file" name="filetoupload">
+      <input type="submit" value="Upload">
+    </form>
+
+<h5>HTML5 form elements</h5>
+<form action="destination" method="get">
+  <label for="number">Number</label>
+  <input type="number" name="number"><br> <br>
+
+  <label for="date">date</label>
+  <input type="date" name="date"><br> <br>
+
+  <label for="time">Time</label>
+  <input type="time" name="time"><br> <br>
+
+  <label for="color">Color</label>
+  <input type="color" name="color"><br> <br>
+
+  <label for="range">Range</label>
+  <input type="range" name="range"><br> <br>
+
+  <label for="range2">Range</label>
+  0<input type="range" name="range2" min="0" max="100" step="5" value="50">100<br> <br>
+
+  <input type="submit" value="Upload">
+</form>
+
+<h4>Element grouping</h4>
+  <p>fieldset</p>
+  <p>legend</p>
+
+  <form action="" method="get">
+    <fieldset>
+      <legend>Inputs 1</legend>
+      <label for="number">Number</label>
+      <input type="number" name="number"><br> <br>
+
+      <label for="date">date</label>
+      <input type="date" name="date"><br> <br>
+    </fieldset></br>
+    <fieldset>
+      <legend>Inputs 2</legend>
+      <label for="color">Color</label>
+      <input type="color" name="color"><br> <br>
+
+      <label for="range">Range</label>
+      <input type="range" name="range"><br> <br>
+    </fieldset></br>
+
+      <input type="submit" value="Upload">
+  </form>
+
+  <div>
+    <fieldset>
+      <legend>Inputs 1</legend>
+      Text1<br> <br>
+
+      <legend>Inputs 2</legend>
+      Text2<br> <br>
+    </fieldset>
+  </div>
+
+
+  </section>
 </body>
 </html>
