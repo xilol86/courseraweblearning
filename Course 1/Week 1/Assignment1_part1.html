@@ -4,38 +4,74 @@
   </head>
   <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1>
-    <fieldset>
-      <legend>Your Face</legend>
-      <label for="filetoupload">Your image</label>
-      <input type="file" name="filetoupload">
-      <br>
-      <label for="profileimage">Image preview:</label>
-    </fieldset>
-    <fieldset>
-      <legend>Your General Details</legend>
-      <label for="name">Name:</label>
-      <input type="text" name="name" placeholder="You full name">
-      <br>
-      <label for="genders">Gender:</label>
-      <input type="radio" name="genders" value="Male">Male
-      <input type="radio" name="genders" value="Male">Female
-      <br>
-      <label for="age">Age:</label>
-      <input type="number" name="age">
-      <br>
-      <label for="dateofbirth">Date of birth:</label>
-      <input type="date" name="dateofbirth">
-      <br>
-      <label for="favoritecolor">Favorite color:</label>
-      <input type="color" name="favoritecolor">
-      <br>
-      <label for="countries">Which country:</label>
-      <select name="countries">
-        <option value="CA">Canada</option>
-        <option value="ME">Mexico</option>
-        <option value="US">USA</option>
-      </select>
-    </fieldset>
-    
+      <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Your Face</legend>
+          <label for="filetoupload">Your image</label>
+          <input type="file" name="filetoupload" required>
+          <br>
+          Image preview:
+          <br>
+          <img src="" id="preview"/>
+        </fieldset>
+        <fieldset>
+          <legend>Your General Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="You full name" required>
+          <br>
+          <label for="genders">Gender:</label>
+          <input type="radio" name="genders" value="Male" required>Male
+          <input type="radio" name="genders" value="Female" required>Female
+          <br>
+          <label for="age">Age:</label>
+          <input type="number" name="age" required>
+          <br>
+          <label for="dateofbirth">Date of birth:</label>
+          <input type="date" name="dateofbirth">
+          <br>
+          <label for="favoritecolor">Favorite color:</label>
+          <input type="color" name="favoritecolor">
+          <br>
+          <label for="countries">Which country:</label>
+          <select name="countries">
+            <option value="empty"></option>
+            <option value="ME">Australia</option>
+            <option value="US">Canada</option>
+            <option value="CA">Mexico</option>
+            <option value="ME">Russia</option>
+            <option value="US">USA</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Your Indicators</legend>
+          <label for="heightrange">Height:</label>
+          Short
+          <input type="range" name="heightrange" min="0" max="100">
+          Tall
+          <br>
+          <label for="salaryrange">Salary:</label>
+          Poor
+          <input type="range" name="salaryrange" min="0" max="100">
+          Rich
+        </fieldset>
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <label for="email">Email:</label>
+          <input type="email" name="email" required>
+          <br>
+          <label for="mobile">Mobile:</label>
+          <input type="tel" name="mobile">
+          <br>
+          <label for="address">Address:</label>
+          <textarea raws="3" cols="60" name="address">
+          </textarea>
+          <br>
+          <label for="contactmethods">Gender:</label>
+          <input type="checkbox" name="contactmethods" value="email">Email
+          <input type="checkbox" name="contactmethods" value="whatsapp">Whatsapp
+          <input type="checkbox" name="contactmethods" value="inappchat">In-app chat
+        </fieldset>
+      <input type="submit">
+     </form>
   </body>
 </html>
