@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <title>Please Enter Your Details For Our Dating Website!</title>
+    <style type="text/css">
+      body { font-family: Arial; }
+      fieldset {
+        background: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+      }
+      label {
+        display: inline-block;
+        vertical-align: top;
+        text-align: right;
+        width: 180px;
+        margin-top: 4px;
+      }
+      label:hover { font-size: 1.3em; }
+      input, select, textarea {
+        margin: 4px;
+        padding: 1px;
+      }
+      .textinput { width: 150px; }
+      .range {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        color: white;
+        padding: 5px;
+        width: 45px;
+      }
+      .rangestart { background: #9e2c27; }
+      .rangeend { background: #7d3381; }
+      .checkradio {
+        width: auto;
+        vertical-align: bottom;
+      }
+      .checkradiolabel { vertical-align: bottom; }
+    </style>
+  </head>
+  <body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+      <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Your Face</legend>
+          <label for="filetoupload">Your image:</label>
+          <input type="file" name="filetoupload" required>
+          <br>
+          <label>Image preview:</label>
+          <img src="" id="preview"/>
+        </fieldset>
+        <fieldset>
+          <legend>Your General Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="Your full name" required class="textinput">
+          <br>
+          <label for="genders">Gender:</label>
+          <input type="radio" name="genders" value="Male" required class="checkradio"><span class="checkradiolabel">Male</span>
+          <input type="radio" name="genders" value="Female" required class="checkradio"><span class="checkradiolabel">Female</span>
+          <br>
+          <label for="age">Age:</label>
+          <input type="number" name="age" required class="textinput">
+          <br>
+          <label for="dateofbirth">Date of birth:</label>
+          <input type="date" name="dateofbirth" class="textinput">
+          <br>
+          <label for="favoritecolor">Favorite color:</label>
+          <input type="color" name="favoritecolor">
+          <br>
+          <label for="countries">Which country:</label>
+          <select name="countries" class="textinput">
+            <option value="empty"></option>
+            <option value="ME">Australia</option>
+            <option value="US">Canada</option>
+            <option value="CA">Mexico</option>
+            <option value="ME">Russia</option>
+            <option value="US">USA</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Your Indicators</legend>
+          <label for="heightrange">Height:</label>
+          <span class="range rangestart">Short</span>
+          <input type="range" name="heightrange" min="0" max="100">
+          <span class="range rangeend">Tall</span>
+          <br>
+          <label for="salaryrange">Salary:</label>
+          <span class="range rangestart">Poor</span>
+          <input type="range" name="salaryrange" min="0" max="100">
+          <span class="range rangeend">Rich</span>
+        </fieldset>
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <label for="email">Email:</label>
+          <input type="email" name="email" required class="textinput">
+          <br>
+          <label for="mobile">Mobile:</label>
+          <input type="tel" name="mobile" class="textinput">
+          <br>
+          <label for="address">Address:</label>
+          <textarea raws="50" cols="50" name="address">
+          </textarea>
+          <br>
+          <label for="contactmethods">Method to contact you:</label>
+          <input type="checkbox" name="contactmethods" value="email" class="checkradio"><span class="checkradiolabel">Email</span>
+          <input type="checkbox" name="contactmethods" value="whatsapp" class="checkradio"><span class="checkradiolabel">Whatsapp</span>
+          <input type="checkbox" name="contactmethods" value="inappchat" class="checkradio"><span class="checkradiolabel">In-app chat</span>
+        </fieldset>
+      <input type="submit" value="Submit!">
+     </form>
+  </body>
+</html>
