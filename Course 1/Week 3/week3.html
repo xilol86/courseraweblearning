@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <h2><i>Coursera, web dev specialitation</i></h2>
+  <h2>Week 3</h2>
+  <h3>Advanced JavaScript</h3>
+  <section>
+    <h4>For loops</h4>
+	<p>for (var i=0; i&#60;array.length, i++) {}</p>
+	<p>for (var i <b>in</b> array) {} &ndash; gives you the index of each item.</p>
+	<p>for (var i <b>of</b> array) {} &ndash; gives you each item.</p>
+	<p>for ( ; ; ) {} &ndash; infinite loop.</p>
+	<p>for (var i=2, j=3; i<=12; i++, j*=2) {}</p>
+  </section>
+  <section>
+    <h4>Loop control</h4>
+	<p><b>break</b> &ndash; totally stops the loop.</p>
+	<p>while (true) { if () else break; }</p>
+	<p><b>continue</b> &ndash; skips the current iteration.</p>
+	<p>for () { if () continue; }</p>
+  </section>
+   <section>
+    <h4>More On Arrays</h4>
+	<p>array.sort() &ndash; sorting.</p>
+	<p>array.reverse() &ndash; reverse.</p>
+	<p>array.sort().reverse() &ndash; descending order.</p>
+	<p>array.indexOf() &ndash; return number of position of element, or -1 if element not found.</p>
+	<p>array.indexOf(target, startPosition) &ndash; find from position.</p>
+	<p>array.lastIndexOf() &ndash; finding element backwards.</p>
+	<p>array2 = array.slice(1) &ndash; extract part of array from specific position. The method doesn't remove elemet from original array!</p>
+	<p>array2 = array.slice(startPosition, endPosition) &ndash; extract part of array from start to end position.</p>
+	<p>array.splice(position, quantity) &ndash; remove elements from array.</p>
+	<p>array.splice(position, 0, element) &ndash; adding element to array.</p>
+	<p>array.splice(position, quantity, elements) &ndash; replace elements in array.</p>
+  </section>
+  <section>
+    <h4>Array Functions</h4>
+	<p>array.forEach() &ndash; go through every element of array.</p>
+	<p>array.forEach(alert);</p>
+	<p>map(function) &ndash; push the result into original array.</p>
+  </section>
+  <section>
+    <h4>DOM</h4>
+	<p>Document Object Model</p>
+	<p>Tree structure &ndash; root, node, sibling, branch.</p>
+	<p>Whitespace nodes</p>
+	<p>Your code can access: parentNode, childNodes[], firstChild, lastChild, previousSibling, nextSibling.</p>
+	<p>We can add/delete/copy/change in the DOM srtucture.</p>
+	<p>node location:</p>
+	<ol>
+	<li>Use the exact DOM path for </li>
+	<li>Use getElementsByTagName()</li>
+	<li>Use getElementById()</li>
+	</ol>
+	<p>node.SetAttribute("property", "value")</p>
+	<p>Creating nodes and elements:</p>
+	<ol>
+	<li>Create node &ndash; createElement(), .createTextNode()</li>
+	<li>Add node &ndash; insertBefore(), .appendChild()</li>
+	</ol>
+	<p>Deleting node &ndash; removeChild().</p>
+	<p>Deleting goes from parent &ndash; node.parentNode.removeChild()</p>
+	<p>Deleting all children &ndash; while the body has any child removeChild</p>
+	<p>Cloning nodes:</p>
+	<ol>
+	<li>Copying a node &ndash; the_node.cloneNode(), the_node.cloneNode(false)</li>
+	<li>Copying a brunch &ndash; the_node.cloneNode(true)</li>
+	<li>Adding nodes &ndash; dest.appenChild(the_node)</li>
+	</ol>
+  </section>
+  <section>
+    <h4>Mouse Events</h4>
+	<p>onclick, onmousedown, onmouseup</p>
+	<p>onmouseover, onmouseout</p>
+  </section>
+  <section>
+    <h4>Timer Events</h4>
+	<p>Timer &ndash; <b>starts</b> smth after time.</p>
+	<p>the_timer=setTimeout(do_smth, 1000)</p>
+	<p>clearTimeout(the_timer)</p>
+	<p>Interval &ndash; <b>repeat</b> smth after time.</p>
+	<p>the_timer=setInterval(do_smth, 2000)</p>
+	<p>clearInterval(the_timer)</p>
+  </section>
+  <section>
+	<h4>Adding Events Using JavaScript</h4>
+	<p>window.onload = function();</p>
+	<p>window.addEventListener("load", function);</p>
+	<p>theBody.removeEventListener("load", function)</p>
+  </section>
+</body>
+</html>
